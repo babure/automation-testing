@@ -1,0 +1,18 @@
+/* styles.css */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.sidebar {
+  width: 25%; /* Adjust width as needed */
+  background-color: #1f2937; /* Tailwind gray-800 */
+  color: white;
+  padding: 16px;
+}
+
+.main-content {
+  flex-grow: 1; /* Allow this to take up remaining space */
+  padding: 16px;
+  background-color: white; /* Change background color for contrast */
+}

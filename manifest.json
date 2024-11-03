@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "My React Chrome Extension",
+  "version": "1.0",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Click to open panel"
+  },
+  "permissions": ["activeTab", "scripting", "storage", "sidePanel"],
+  "host_permissions": ["https://www.saucedemo.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://www.saucedemo.com/*"],
+      "js": ["contentScript.js"],
+      "css": ["styles.css"]
+    }
+  ],
+  "side_panel": {
+    "default_path": "index.html"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["styles.css"],
+      "matches": ["https://www.saucedemo.com/*"]
+    }
+  ],
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png"
+  }
+}
